@@ -25,7 +25,7 @@ export const LanguagesList = ({
     open,
   } = useDropdown()
 
-  const currentLang = find(languages, (lang) => lang.id === targetLanguage).text
+  const currentLang = find(languages, (lang) => lang.id === targetLanguage)?.text
 
   return (
     <ListLanguagesBlock>

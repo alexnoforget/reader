@@ -7,6 +7,7 @@ import size from 'lodash/size'
 import join from 'lodash/join'
 import { getCookie, setCookie } from "../helpers/cookie"
 
+const DEFAULT_LANGUAGE = 'ru'
 const COUNT = 130
 const EXT_DAYS = 9999
 const LANGUAGES = [
@@ -18,7 +19,7 @@ const LANGUAGES = [
 export const useGetBook = () => {
   const [bookText, setBookText] = useState('')
   const [page, setPage] = useState(Number(getCookie('page')) || 1)
-  const [targetLanguage, setTargetLanguage] = useState(getCookie('target_lang'))
+  const [targetLanguage, setTargetLanguage] = useState(getCookie('target_lang') || DEFAULT_LANGUAGE)
 
   useEffect(() => {
     fetch(raw)
