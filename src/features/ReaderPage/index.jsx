@@ -10,7 +10,6 @@ import {
 	Wrapper,
 	ButtonsBlock,
 	PageNumber,
-	Translation,
 } from "./styled";
 import map from "lodash/map";
 import isEmpty from 'lodash/isEmpty'
